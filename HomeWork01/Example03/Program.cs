@@ -1,7 +1,6 @@
-﻿Console.Write("Введите число для его проверки: ");
-string n = Console.ReadLine();
-int a = n;
-if(a % 2 == 0 )
+﻿// Введите число для его проверки на четность
+int n = 4; //<-- 
+if(n % 2 == 0 )
 {
     Console.Write("Число ");
     Console.Write(n);
