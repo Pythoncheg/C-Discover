@@ -1,5 +1,9 @@
-﻿int a = 2;
-int b = 10;
+﻿Console.Write("Введите первое число: ");
+int a = int.Parse(Console.ReadLine());
+
+Console.Write("Введите второе число: ");
+int b = int.Parse(Console.ReadLine());
+
 int max = 0;
 int min = 0;
 
