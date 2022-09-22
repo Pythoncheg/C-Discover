@@ -1,4 +1,5 @@
-﻿Console.Write("Введите первое число: ");
+﻿Console.Clear();
+Console.Write("Введите первое число: ");
 int a = int.Parse(Console.ReadLine());
 
 Console.Write("Введите второе число: ");
@@ -17,7 +18,5 @@ else
     max = b;
     min = a;
 }
-Console.Write("Максимальное число:");
-Console.WriteLine(max);
-Console.Write("Минимальное число:");
-Console.WriteLine(min);
+
+Console.WriteLine($"Максимальным числом является {max}, а минимальное разумеется {min}. Что тут не понятно то? А!?");
