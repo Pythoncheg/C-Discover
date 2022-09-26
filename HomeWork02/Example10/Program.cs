@@ -1,4 +1,4 @@
-﻿int n = 456;
+﻿int n = 867;
 int a = n / 10;
 int b = a % 10;
 

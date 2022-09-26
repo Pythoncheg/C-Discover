@@ -9,8 +9,9 @@
 
 // 32679 -> 6
 
-
-int n = 3345678;
+Console.Clear();
+Console.Write("Введите число: ");
+int n = int.Parse(Console.ReadLine());
 Console.WriteLine($"Задано число - {n}.");
 if(n < 99)
 {
