@@ -1,4 +1,8 @@
-﻿int n = 34;
+﻿int n = 456;
 int a = n / 10;
 int b = a % 10;
-Console.WriteLine(b);
+
+
+Console.WriteLine($"Заданое число {n}");
+Console.WriteLine($"Искомая цифра {b}");
+
