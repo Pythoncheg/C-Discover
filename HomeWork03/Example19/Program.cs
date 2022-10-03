@@ -6,29 +6,36 @@
 // 12821 -> да
 
 // 23432 -> да
+#region
 
+int[] CreateArray(int size)
+{
+    return new int[size];
+}
 
 void Fill(int[] array)
 {
-    Console.Write("Введите последовательно пятизначное число: ");
+    Console.WriteLine("Введите последовательно пять чисел от 1 до 9 для проверки на полиндром: ");
     int size = array.Length;
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(1, 10);
+        array[i] = int.Parse(Console.ReadLine());
+        if (array[i] > 9)
+        {
+            Console.WriteLine("Введено не корректное число!");
+            i--;
+        }
     }
 }
-
-void PrintArray(int[] array)
+void Print(int[] array)
 {
-    int count = array.Length;
-
-    for (int i = 0; i < count; i++)
+    int size = array.Length;
+    for (int i = 0; i < size; i++)
     {
-        Console.Write($"{array[i]} ");
+        Console.Write(array[i] + " ");
     }
     Console.WriteLine();
 }
-
 
 void Palindrom(int[] array)
 {
@@ -43,7 +50,11 @@ void Palindrom(int[] array)
         Console.WriteLine("Не палиндром.");
     }
 }
-int[] numbers = New Array[](5);
-int[] numbers = Fill();
-PrintArray(numbers);
-// Palindrom(numbers);
+#endregion
+
+Console.Clear();
+int length = 5;
+int[] numbers = CreateArray(length);
+Fill(numbers);
+Print(numbers);
+Palindrom(numbers);
