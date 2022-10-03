@@ -8,19 +8,27 @@
 // 23432 -> да
 
 
-int[] numbers = new int[5];
-
-int[] Input(int[] array)
+void Fill(int[] array)
 {
     Console.Write("Введите последовательно пятизначное число: ");
-    int size = 5;
-    int[] newArray = new int[size];
+    int size = array.Length;
     for (int i = 0; i < size; i++)
     {
-        newArray[i] = system.int32(Console.ReadLine());
+        array[i] = new Random().Next(1, 10);
     }
-    return array;
 }
+
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+
 
 void Palindrom(int[] array)
 {
@@ -35,6 +43,7 @@ void Palindrom(int[] array)
         Console.WriteLine("Не палиндром.");
     }
 }
-Input(numbers);
-Console.WriteLine(numbers);
+int[] numbers = New Array[](5);
+int[] numbers = Fill();
+PrintArray(numbers);
 // Palindrom(numbers);
