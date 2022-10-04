@@ -25,7 +25,7 @@ int Search(int[] array, int findMin, int findMax)
     {
         if (array[i] >= findMin && array[i] <= findMax)
         {
-        count++;
+            count++;
         }
     }
     return count;
@@ -36,5 +36,3 @@ Console.WriteLine(Print(arr));
 Fill(arr, 1, 200);
 Console.WriteLine(Print(arr));
 Console.WriteLine(Search(arr, 10, 99));
-
-// 53 min
