@@ -35,7 +35,7 @@ void Fill(int[] array)
     int size = array.Length;
     for (int i = 0; i < size; i++)
     {
-        array[i] = array[i] + new Random().Next(-99, 99);
+        array[i] += new Random().Next(-99, 99);
     }
 }
 
@@ -45,9 +45,9 @@ int SearchSum(int[] array)
 {
     int size = array.Length;
     int sum = 0;
-    for (int i = 0; i < size; i += 2)
+    for (int i = 1 ; i < size; i += 2)
     {
-        sum = array[i] + sum;
+        sum += array[i];
     }
     return sum;
 }
