@@ -41,9 +41,7 @@ int[] collection = Create(size);
 Fill(collection);
 
 // 4.Распечатать полученный массив.
-Console.WriteLine(
-    $"Задан массив из случайных псевдочисел: " + "{" + (String.Join(' ', collection)) + "}"
-);
+Console.WriteLine($"Задан массив из случайных псевдочисел: " + "{" + (String.Join(' ', collection)) + "}");
 
 // 5. Найти максимальное и минимальное число.
 Console.WriteLine("Максимальное число " + collection.Min());

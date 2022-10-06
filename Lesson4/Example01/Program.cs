@@ -40,7 +40,7 @@ void Fill(int[,] matr)
     }
 }
 
-int[,] matrix = new int[3, 4];
+int[,] matrix =new int[3, 4];
 
 Console.WriteLine();
 PrintArray(matrix);
