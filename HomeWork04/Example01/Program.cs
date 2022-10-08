@@ -11,31 +11,27 @@ void CountVisit(int[] array, int goIn, int goOut)
     }
 }
 
-int[] Final(int[] array)
+void Final(int[] array)
 {
-    int in = 0;
-    int out = 0;
+    int inVis = 0;
+    int outVis = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] == array.Max()) in = i;
-        
-        if(in > 0) out = i;
-        
-    
-        
+        if (array[i] == array.Max())
+        {
+            inVis = i - 1;
+            outVis = inVis + 1;
+        }
+
+
+
     }
-    int[] sum = new int[]{in, out};
-    Console.WriteLine(String.Join('-'));
+    int[] sum = new int[] { inVis, outVis };
+    Console.WriteLine(String.Join('-', sum));
 
 }
 
-// int InOutTime(string in)
-// {
-//     string[] arr = in.Split('-');
-//     int goIn = Convert.ToInt32(arr[0]);
-//     int goOut = Convert.ToInt32(arr[1]);
-//     return goIn;
-// }
+
 
 // 10-12
 // 11-13
@@ -54,7 +50,5 @@ CountVisit(time, goIn, goOut);
 goIn = 9;
 goOut = 12;
 CountVisit(time, goIn, goOut);
-
-
 Console.WriteLine(String.Join(' ', time));
 Final(time);
