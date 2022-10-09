@@ -58,3 +58,4 @@ CountVisit(time, goIn, goOut);
 
 Console.WriteLine(String.Join(' ', time));
 Final(time);
+
