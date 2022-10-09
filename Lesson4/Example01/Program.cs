@@ -1,4 +1,4 @@
-﻿string[,] table = new string[2, 5];
+﻿// string[,] table = new string[2, 2];
 
 // String.Empty
 // table[0,0] table[0,1] table[0,2] table[0,3] table[0,4]
@@ -40,7 +40,7 @@ void Fill(int[,] matr)
     }
 }
 
-int[,] matrix =new int[3, 4];
+int[,] matrix =new int[3, 3];
 
 Console.WriteLine();
 PrintArray(matrix);

@@ -31,7 +31,7 @@ void Fill(int[] array)
     int size = array.Length;
     for (int i = 0; i < size; i++)
     {
-        array[i] = array[i] + new Random().Next(1, 99);
+        array[i] += new Random().Next(1, 99);
     }
 }
 
