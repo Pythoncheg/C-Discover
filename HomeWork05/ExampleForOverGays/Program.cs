@@ -1,9 +1,8 @@
 ﻿// Написать программу премножения любых целых чисел
 
 Console.Write("Введите первое число: ");
-SByte firstNumber = Convert.ToSByte(Console.ReadLine());
+double firstNumber = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите второе число: ");
-sbyte secondNumber = Convert.ToSByte(Console.ReadLine());
-sbyte sum = secondNumber + firstNumber;
-Console.WriteLine($"Сумма чисел равна: {sum}");
-sum.ToString.
+double secondNumber = Convert.ToDouble(Console.ReadLine());
+double sum = secondNumber * firstNumber;
+Console.WriteLine($"Произведение чисел равно: {sum}");
