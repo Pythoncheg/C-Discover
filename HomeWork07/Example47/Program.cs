@@ -30,11 +30,11 @@ void Fill(double [,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(-10, 10) / 10.0;
+            matrix[i, j] = new Random().Next(-9, 10);
         }
     }
 }
-
+Console.Clear();
 Console.WriteLine("Задайте двумерный массив размером MxN.");
 
 Console.Write("Введите число M: ");

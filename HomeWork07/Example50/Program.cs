@@ -12,6 +12,13 @@
 
 // 17 -> такого числа в массиве нет
 
+// ===>  Доработать определение размера массива псевдослучайными числами!
+
+int GetValue(int min, int max)
+{
+    return new Random().Next(min, max);
+}
+
 void PrintArray(int[,] matrix)
 {
 
@@ -46,7 +53,9 @@ void SearchElement(int[,] matrix, int posX, int posY)
 }
 
 Console.Clear();
-int[,] collection = new int[3, 4];
+int rowsi = GetValue(2,15);
+int columsi = GetValue(2, 15);
+int[,] collection = new int[rowsi, columsi];
 Fill(collection);
 PrintArray(collection);
 
