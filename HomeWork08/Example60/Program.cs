@@ -6,3 +6,44 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
+
+int CreateRandomNum(int min, int max)
+{
+    return new Random().Next(min, max);
+}
+
+void Fill(int[,,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            for (int k = 0; k < matrix.GetLength(2); k++)
+            {
+                matrix[i, j, k] = new Random().Next(10, 99);
+            }
+        }
+    }
+}
+
+void PrintArray(int[,,] matrix)
+{
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            for (int k = 0; k < matrix.GetLength(2); k++)
+            {
+            Console.Write($"{matrix[i, j, k]} {(j, k, i)} ");                
+            }
+        Console.WriteLine();
+        }
+    }
+}
+
+int [,,] collection = new int[2,2,2];
+Fill(collection);
+PrintArray(collection);
+
+
