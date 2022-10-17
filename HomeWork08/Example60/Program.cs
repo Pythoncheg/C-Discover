@@ -7,24 +7,55 @@
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-int CreateRandomNum(int min, int max)
+// Описать метод сравнения элементов в массиве.
+
+bool SearchRepeatingNum(int[,,] array, int element)
 {
-    return new Random().Next(min, max);
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                if (array[i, j, k] == element) return true;
+            }
+        }
+    }
+    return false;
 }
+
+// Описать метод заполнения массива псевдослучайными уникальными числами.
 
 void Fill(int[,,] matrix)
 {
+    int index;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                matrix[i, j, k] = new Random().Next(10, 99);
+                index = new Random().Next(10, 100);
+                if (SearchRepeatingNum(matrix, index)) 
+                {
+                    i--;
+                    continue;
+                }
+                matrix[i, j, k] = index;
             }
+            // int k = 0;
+            // while (k < matrix.GetLength(2))
+            // {
+            //     index = new Random().Next(10, 100);
+            //     if(SearchRepeatingNum(matrix, index)) continue;
+            //     matrix[i, j, k]=index;
+            //     k++;
+            // }
         }
     }
 }
+
+// Описать метод распечатывания массива.
 
 void PrintArray(int[,,] matrix)
 {
@@ -35,15 +66,23 @@ void PrintArray(int[,,] matrix)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-            Console.Write($"{matrix[i, j, k]} {(j, k, i)} ");                
+                Console.Write($"{matrix[i, j, k]} {(i, j, k)} ");
             }
-        Console.WriteLine();
+            Console.WriteLine();
         }
     }
 }
 
-int [,,] collection = new int[2,2,2];
+
+Console.Clear();
+Console.WriteLine("Сформирован трехмерный массив из неповторяющихся двузначных чисел: ");
+Console.WriteLine();
+int[,,] collection = new int[2, 2, 2];
 Fill(collection);
 PrintArray(collection);
+Console.WriteLine();
+Console.WriteLine("В скобках указан индекс числа.");
+
+
 
 
